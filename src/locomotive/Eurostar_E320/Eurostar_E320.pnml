@@ -14,14 +14,14 @@ item(FEAT_TRAINS, Eurostar_E320, 1036){
     property {
         name:                           string(STR_Eurostar_E320_NAME);
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2014, 1, 1);
+        introduction_date:              date(2011, 1, 1);
         track_type:                     ELRL;
         engine_class:                   ENGINE_CLASS_ELECTRIC;
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         dual_headed:                    1;
         
         //spec
-        speed:                          362km/h;
+        speed:                          368km/h;
         power:                          8000 kW;
         weight:                         40 ton;
         tractive_effort_coefficient:    0.3;
@@ -37,7 +37,7 @@ item(FEAT_TRAINS, Eurostar_E320, 1036){
         cargo_capacity:                 30;
         refittable_cargo_classes:       NO_CARGO_CLASS;
         non_refittable_cargo_classes:   NO_CARGO_CLASS;
-        cargo_allow_refit:              [PASS];
+        cargo_allow_refit:              [PASS, MAIL, VALU];
         cargo_disallow_refit:           [];
         
         //Costs
@@ -52,10 +52,10 @@ item(FEAT_TRAINS, Eurostar_E320, 1036){
     graphics {
         default:                        sw_Eurostar_E320_engine;
         purchase:                       sw_Eurostar_E320_purchase;
-        speed:                          High_Speed_Train;
+        speed:                          368;
         loading_speed:                  25;
-        cost_factor:                    10;
-        running_cost_factor:            150;
+        cost_factor:                    70*param_purchase_cost;
+        running_cost_factor:            96*param_running_cost;
         can_attach_wagon:               sw_Eurostar_E320_wagon_attach;
         start_stop:                     sw_YST_train_start_stop_6;
         additional_text:                string(STR_REFIT_ADDITIONAL_Eurostar_E320);
@@ -63,7 +63,7 @@ item(FEAT_TRAINS, Eurostar_E320, 1036){
         
     livery_override(ETS_Passenger_Car) {
         default:                        sw_Eurostar_E320_wagon;
-        cargo_capacity:                 50;
+        cargo_capacity:                 60;
         loading_speed:                  25;
-        running_cost_factor:            150;}
+        running_cost_factor:            30*param_running_cost;}
         }

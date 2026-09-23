@@ -12,7 +12,7 @@ spriteset(set_TGV_A_BH_purchase, "src/locomotive/TGV/TGV_AR/TGV_A_blue.png"){
     tmpl_purchase_for_dualhead(0, 162)
 }
 
-spriteset(set_TGV_A_B_engineH, "src\/locomotive/TGV/TGV_AR/TGV_A_blue.png"){
+spriteset(set_TGV_A_B_engineH, "src//locomotive/TGV/TGV_AR/TGV_A_blue.png"){
     engine(80, 0)
 }
 
@@ -47,7 +47,7 @@ spriteset(set_TGV_A_BLH_purchase, "src/locomotive/TGV/TGV_AR/TGV_A_blueL.png"){
     tmpl_purchase_for_dualhead(0, 162)
 }
 
-spriteset(set_TGV_A_BL_engineH, "src\/locomotive/TGV/TGV_AR/TGV_A_blueL.png"){
+spriteset(set_TGV_A_BL_engineH, "src//locomotive/TGV/TGV_AR/TGV_A_blueL.png"){
     engine(80, 0)
 }
 
@@ -82,7 +82,7 @@ spriteset(set_TGV_A_CH_purchase, "src/locomotive/TGV/TGV_AR/TGV_A_c.png"){
     tmpl_purchase_for_dualhead(0, 162)
 }
 
-spriteset(set_TGV_A_C_engineH, "src\/locomotive/TGV/TGV_AR/TGV_A_c.png"){
+spriteset(set_TGV_A_C_engineH, "src//locomotive/TGV/TGV_AR/TGV_A_c.png"){
     engine(80, 0)
 }
 
@@ -117,7 +117,7 @@ spriteset(set_TGV_R_BH_purchase, "src/locomotive/TGV/TGV_AR/TGV_R_blue.png"){
     tmpl_purchase_for_dualhead(0, 162)
 }
 
-spriteset(set_TGV_R_B_engineH, "src\/locomotive/TGV/TGV_AR/TGV_R_blue.png"){
+spriteset(set_TGV_R_B_engineH, "src//locomotive/TGV/TGV_AR/TGV_R_blue.png"){
     engine(80, 0)
 }
 
@@ -156,7 +156,7 @@ spriteset(set_TGV_R_BLH_purchase, "src/locomotive/TGV/TGV_AR/TGV_R_blueL.png"){
     tmpl_purchase_for_dualhead(0, 162)
 }
 
-spriteset(set_TGV_R_BL_engineH, "src\/locomotive/TGV/TGV_AR/TGV_R_blueL.png"){
+spriteset(set_TGV_R_BL_engineH, "src//locomotive/TGV/TGV_AR/TGV_R_blueL.png"){
     engine(80, 0)
 }
 
@@ -195,7 +195,7 @@ spriteset(set_TGV_R_CH_purchase, "src/locomotive/TGV/TGV_AR/TGV_R_c.png"){
     tmpl_purchase_for_dualhead(0, 162)
 }
 
-spriteset(set_TGV_R_C_engineH, "src\/locomotive/TGV/TGV_AR/TGV_R_c.png"){
+spriteset(set_TGV_R_C_engineH, "src//locomotive/TGV/TGV_AR/TGV_R_c.png"){
     engine(80, 0)
 }
 

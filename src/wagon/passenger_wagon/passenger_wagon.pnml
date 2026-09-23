@@ -24,7 +24,7 @@ item (FEAT_TRAINS, ETS_Passenger_Car, 1031){
         cargo_capacity:                 50;
         refittable_cargo_classes:       NO_CARGO_CLASS;
         non_refittable_cargo_classes:   NO_CARGO_CLASS;
-        cargo_allow_refit:              [PASS];
+        cargo_allow_refit:              [PASS, MAIL, VALU];
         cargo_disallow_refit:           [];
 
         //Costs
@@ -40,8 +40,8 @@ item (FEAT_TRAINS, ETS_Passenger_Car, 1031){
 		default:						sw_Passenge_wagon;
 		purchase:						set_wagon_purchase;
         loading_speed:                  25;
-        cost_factor:                    10;
-        running_cost_factor:            50;
+        cost_factor:                    30*param_purchase_cost;
+        running_cost_factor:            27*param_running_cost;
         cargo_subtype_text:             sw_Passenger_wagon_cargo_subtype_text;
 		additional_text:                string(STR_REFIT_train_configuration_Passenger);
         }

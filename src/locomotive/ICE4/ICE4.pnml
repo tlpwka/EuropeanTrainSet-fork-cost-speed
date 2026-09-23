@@ -21,7 +21,7 @@ item(FEAT_TRAINS, ICE4, 1125){
         dual_headed:                    1;
         
         //spec
-        speed:                          265km/h;
+        speed:                          390km/h;
         power:                          700 kW;
         weight:                         67 ton;
         tractive_effort_coefficient:    0.3;
@@ -37,7 +37,7 @@ item(FEAT_TRAINS, ICE4, 1125){
         cargo_capacity:                 65;
         refittable_cargo_classes:       NO_CARGO_CLASS;
         non_refittable_cargo_classes:   NO_CARGO_CLASS;
-        cargo_allow_refit:              [PASS];
+        cargo_allow_refit:              [PASS, MAIL, VALU];
         cargo_disallow_refit:           [];
         
         //Costs
@@ -53,8 +53,8 @@ item(FEAT_TRAINS, ICE4, 1125){
         default:                        sw_ICE4_engine;
         purchase:                       sw_ICE4_purchase;
         loading_speed:                  25;
-        cost_factor:                    10;
-        running_cost_factor:            150;
+        cost_factor:                    70*param_purchase_cost;
+        running_cost_factor:            95*param_running_cost;
         can_attach_wagon:               sw_ICE4_wagon_attach;
         cargo_subtype_text:             sw_ICE4_cargo_subtype_text;
         additional_text:                string(STR_REFIT_ADDITIONAL_ICE4);
@@ -63,9 +63,9 @@ item(FEAT_TRAINS, ICE4, 1125){
     livery_override(ETS_Passenger_Car) {
         default:                        sw_ICE4_wagon;
         cargo_subtype_text:             sw_ICE4_cargo_subtype_text;
-        cargo_capacity:                 50;
+        cargo_capacity:                 55;
         loading_speed:                  25;
-        running_cost_factor:            100;
+        running_cost_factor:            29*param_running_cost;
         power:                          948;
         weight:                         67;
         }

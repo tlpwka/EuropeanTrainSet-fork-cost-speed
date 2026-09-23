@@ -21,7 +21,7 @@ item(FEAT_TRAINS, TGV_Sud_Est, 1042){
         dual_headed:                    1;
         
         //spec
-        speed:                          300km/h;
+        speed:                          275km/h;
         power:                          6800 kW;
         weight:                         38 ton;
         tractive_effort_coefficient:    0.3;
@@ -42,7 +42,7 @@ item(FEAT_TRAINS, TGV_Sud_Est, 1042){
         
         //Costs
         refit_cost:                     0;
-        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
         
         //Flags
         misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_AUTOREFIT);
@@ -54,8 +54,8 @@ item(FEAT_TRAINS, TGV_Sud_Est, 1042){
         purchase:                       sw_TGV_Sud_Est_Orange_purchase;
         cargo_subtype_text:             sw_TGV_Sud_Est_cargo_subtype_text;
         loading_speed:                  25;
-        cost_factor:                    10;
-        running_cost_factor:            150;
+        cost_factor:                    58*param_purchase_cost;
+        running_cost_factor:            90*param_running_cost;
         cargo_capacity:                 0;
         purchase_cargo_capacity:        0;
         can_attach_wagon:               sw_TGV_Sud_Est_wagon_attach;
@@ -67,8 +67,8 @@ item(FEAT_TRAINS, TGV_Sud_Est, 1042){
         default:                        sw_TGV_Sud_Est_wagon;
         cargo_subtype_text:             sw_TGV_Sud_Est_cargo_subtype_text;
         weight:                         38;
-        cargo_capacity:                 43;
+        cargo_capacity:                 45;
         loading_speed:                  25;
-        running_cost_factor:            150;
+        running_cost_factor:            30*param_running_cost;
         }
         }

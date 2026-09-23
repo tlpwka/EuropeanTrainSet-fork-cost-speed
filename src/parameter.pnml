@@ -6,8 +6,8 @@ param {
             type: int;
             name: string(STR_PARAM_Regular_SPEED_Train_NAME);
             desc: string(STR_PARAM_Regular_SPEED_Train_DESC);
-            min_value: 151;
-            max_value: 180;
+            min_value: 1;
+            max_value: 580;
             def_value: 151;
             }
     }
@@ -17,8 +17,51 @@ param {
             type: int;
             name: string(STR_PARAM_High_SPEED_Train_NAME);
             desc: string(STR_PARAM_High_SPEED_Train_DESC);
-            min_value: 300;
-            max_value: 379;
-            def_value: 330;
+            min_value: 1;
+            max_value: 579;
+            def_value: 502;
             }
+    }
+    
+       param {
+        param_purchase_cost {
+            type:   int;
+            name:   string(STR_PARAM_PURCHASE_COST);
+            desc:   string(STR_PARAM_PURCHASE_COST_DESC);
+            min_value: 1;
+            max_value: 9;
+            def_value: 5;
+            names: {
+                        1: string(STR_PARAM_DIVIDE_16);
+                        2: string(STR_PARAM_DIVIDE_8);
+                        3: string(STR_PARAM_DIVIDE_4);
+                        4: string(STR_PARAM_DIVIDE_2);
+                        5: string(STR_PARAM_NORMAL);
+                        6: string(STR_PARAM_TIMES_2);
+                        7: string(STR_PARAM_TIMES_4);
+                        8: string(STR_PARAM_TIMES_8);
+                        9: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+    param {
+        param_running_cost {
+            type:   int;
+            name:   string(STR_PARAM_RUNNING_COST);
+            desc:   string(STR_PARAM_RUNNING_COST_DESC);
+            min_value: 1;
+            max_value: 9;
+            def_value: 5;
+            names: {
+                        1: string(STR_PARAM_DIVIDE_16);
+                        2: string(STR_PARAM_DIVIDE_8);
+                        3: string(STR_PARAM_DIVIDE_4);
+                        4: string(STR_PARAM_DIVIDE_2);
+                        5: string(STR_PARAM_NORMAL);
+                        6: string(STR_PARAM_TIMES_2);
+                        7: string(STR_PARAM_TIMES_4);
+                        8: string(STR_PARAM_TIMES_8);
+                        9: string(STR_PARAM_TIMES_16);
+            };
+        }
     }

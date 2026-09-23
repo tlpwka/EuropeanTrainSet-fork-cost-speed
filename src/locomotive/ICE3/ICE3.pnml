@@ -53,8 +53,8 @@ item(FEAT_TRAINS, ICE3, 1037){
         default:                        sw_ICE3_engine;
         purchase:                       sw_ICE3_purchase;
         loading_speed:                  25;
-        cost_factor:                    10;
-        running_cost_factor:            150;
+        cost_factor:                    59*param_purchase_cost;
+        running_cost_factor:            90*param_running_cost;
         can_attach_wagon:               sw_ICE3_wagon_attach;
         cargo_subtype_text:             sw_ICE3_cargo_subtype_text;
         start_stop:                     sw_YST_train_start_stop_6;
@@ -66,8 +66,8 @@ item(FEAT_TRAINS, ICE3, 1037){
         cargo_subtype_text:             sw_ICE3_cargo_subtype_text;
         power:                          1341;
         weight:                         sw_ICE3_weight;
-        cargo_capacity:                 sw_ICE3_capa;
+        cargo_capacity:                 57;
         loading_speed:                  25;
-        running_cost_factor:            100;
+        running_cost_factor:            27*param_running_cost;
         }
         }

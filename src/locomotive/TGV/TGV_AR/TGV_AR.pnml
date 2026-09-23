@@ -21,7 +21,7 @@ item(FEAT_TRAINS, TGV_AR, 1044){
         dual_headed:                    1;
         
         //spec
-        speed:                          320km/h;
+        speed:                          330km/h;
         power:                          10400 kW;
         weight:                         37 ton;
         tractive_effort_coefficient:    0.3;
@@ -42,7 +42,7 @@ item(FEAT_TRAINS, TGV_AR, 1044){
         
         //Costs
         refit_cost:                     0;
-        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
         
         //Flags
         misc_flags:                     bitmask(TRAIN_FLAG_FLIP, TRAIN_FLAG_MU,TRAIN_FLAG_AUTOREFIT);
@@ -53,8 +53,8 @@ item(FEAT_TRAINS, TGV_AR, 1044){
         default:                        sw_TGV_AR_engine;
         purchase:                       sw_TGV_AR_purchase;
         loading_speed:                  25;
-        cost_factor:                    10;
-        running_cost_factor:            150;
+        cost_factor:                    60*param_purchase_cost;
+        running_cost_factor:            90*param_running_cost;
         cargo_capacity:                 0;
         purchase_cargo_capacity:        0;
         can_attach_wagon:               sw_TGV_AR_wagon_attach;
@@ -67,8 +67,8 @@ item(FEAT_TRAINS, TGV_AR, 1044){
         default:                        sw_TGV_AR_wagon;
         cargo_subtype_text:             sw_TGV_AR_cargo_subtype_text;
         weight:                         37;
-        cargo_capacity:                 sw_TGV_AR_capa;
+        cargo_capacity:                 55;
         loading_speed:                  25;
-        running_cost_factor:            150;
+        running_cost_factor:            27*param_running_cost;
         }
         }

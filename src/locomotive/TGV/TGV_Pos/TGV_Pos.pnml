@@ -14,14 +14,14 @@ item(FEAT_TRAINS, TGV_Pos, 1047){
     property {
         name:                           string(STR_TGV_Pos_NAME);
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2006, 1, 1);
+        introduction_date:              date(2010, 1, 1);
         track_type:                     ELRL;
         engine_class:                   ENGINE_CLASS_ELECTRIC;
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         dual_headed:                    1;
         
         //spec
-        speed:                          362km/h;
+        speed:                          368km/h;
         power:                          8000 kW;
         weight:                         40 ton;
         tractive_effort_coefficient:    0.3;
@@ -37,12 +37,12 @@ item(FEAT_TRAINS, TGV_Pos, 1047){
         cargo_capacity:                 1;
         refittable_cargo_classes:       NO_CARGO_CLASS;
         non_refittable_cargo_classes:   NO_CARGO_CLASS;
-        cargo_allow_refit:              [PASS];
+        cargo_allow_refit:              [PASS, MAIL, VALU];
         cargo_disallow_refit:           [];
         
         //Costs
         refit_cost:                     0;
-        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
         
         //Flags
         misc_flags:                     bitmask(TRAIN_FLAG_FLIP, TRAIN_FLAG_MU,TRAIN_FLAG_AUTOREFIT);
@@ -52,10 +52,10 @@ item(FEAT_TRAINS, TGV_Pos, 1047){
 	graphics {
         default:                        sw_TGV_Pos_engine;
         purchase:                       sw_TGV_POS_purchase;
-        speed:                          High_Speed_Train;
+        speed:                          368;
         loading_speed:                  25;
-        cost_factor:                    10;
-        running_cost_factor:            150;
+        cost_factor:                    70*param_purchase_cost;
+        running_cost_factor:            99*param_running_cost;
         cargo_capacity:                 0;
         purchase_cargo_capacity:        0;
         can_attach_wagon:               sw_TGV_Pos_wagon_attach;
@@ -67,8 +67,8 @@ item(FEAT_TRAINS, TGV_Pos, 1047){
     livery_override(ETS_Passenger_Car) {
         default:                        sw_TGV_Pos_wagon;
         cargo_subtype_text:             sw_TGV_Pos_cargo_subtype_text;
-        cargo_capacity:                 85;
+        cargo_capacity:                 65;
         loading_speed:                  25;
-        running_cost_factor:            150;
+        running_cost_factor:            32*param_running_cost;
         }
         }

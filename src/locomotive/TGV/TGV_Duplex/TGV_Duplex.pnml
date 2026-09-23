@@ -6,7 +6,11 @@ TGV Duplex
 
 // Switch
 #include "TGV_Duplex_switch.pnml"
-
+/* SPEED */
+    switch (FEAT_TRAINS, SELF, tgv_duplex_speed, current_year) {
+	    0..2025: return 329;                        // Until 2024, Speed = 390 km/h
+	    return 349;                                 // After 2024, Speed = 504 km/h
+    }
 /*--------------------------------------------------------------------
 열차정보
 --------------------------------------------------------------------*/
@@ -21,7 +25,7 @@ item(FEAT_TRAINS, TGV_Duplex, 1041){
         dual_headed:                    1;
         
         //spec
-        speed:                          362km/h;
+        speed:                          329km/h;
         power:                          10000 kW;
         weight:                         40 ton;
         tractive_effort_coefficient:    0.3;
@@ -42,7 +46,7 @@ item(FEAT_TRAINS, TGV_Duplex, 1041){
         
         //Costs
         refit_cost:                     0;
-        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
         
         //Flags
         misc_flags:                     bitmask(TRAIN_FLAG_FLIP, TRAIN_FLAG_MU,TRAIN_FLAG_AUTOREFIT);
@@ -52,10 +56,10 @@ item(FEAT_TRAINS, TGV_Duplex, 1041){
 	graphics {
         default:                        sw_TGV_Duplex_engine;
         purchase:                       sw_TGV_Duplex_purchase;
-        speed:                          High_Speed_Train;
+        speed:                          tgv_duplex_speed;
         loading_speed:                  25;
-        cost_factor:                    10;
-        running_cost_factor:            150;
+        cost_factor:                    62*param_purchase_cost;
+        running_cost_factor:            95*param_running_cost;
         cargo_capacity:                 0;
         purchase_cargo_capacity:        0;
         can_attach_wagon:               sw_TGV_Duplex_wagon_attach;
@@ -67,8 +71,8 @@ item(FEAT_TRAINS, TGV_Duplex, 1041){
     livery_override(ETS_Passenger_Car) {
         default:                        sw_TGV_Duplex_wagon;
         cargo_subtype_text:             sw_TGV_Duplex_cargo_subtype_text;
-        cargo_capacity:                 170;
+        cargo_capacity:                 117;
         loading_speed:                  25;
-        running_cost_factor:            150;
+        running_cost_factor:            32*param_running_cost;
         }
         }

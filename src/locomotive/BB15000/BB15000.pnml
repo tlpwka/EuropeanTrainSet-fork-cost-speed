@@ -41,7 +41,7 @@ item(FEAT_TRAINS, BB15000, 1129){
         
         //Costs
         refit_cost:                     0;
-        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
         
         //Flags
         misc_flags:                     bitmask(TRAIN_FLAG_FLIP, TRAIN_FLAG_AUTOREFIT);
@@ -51,10 +51,10 @@ item(FEAT_TRAINS, BB15000, 1129){
     graphics {
         default:                        sw_BB15000_engine;
         purchase:                       sw_BB15000_purchase;
-        speed:                          Regular_Speed_Train;
+        speed:                          160;
         cargo_capacity:                 0;
-        cost_factor:                    10;
-        running_cost_factor:            150;
+        cost_factor:                    30*param_purchase_cost;
+        running_cost_factor:            60*param_running_cost;
         cargo_subtype_text:             sw_BB15000_cargo_subtype_text;
         additional_text:                string(STR_REFIT_ADDITIONAL_BB15000);
         }
